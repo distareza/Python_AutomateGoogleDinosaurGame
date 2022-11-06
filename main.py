@@ -40,11 +40,13 @@ canvas_region = (270, 396, 764, 217)
 # Calling screenshot() will return an Image object
 # canvas = pyautogui.screenshot(imageFilename="play_canvas.png", region=canvas_region)
 
-obstacle_region = (366, 531, 90, 45)
+obstacle_region = (376, 531, 100, 45)
+#obstacle = pyautogui.screenshot(imageFilename="before.png", region=obstacle_region)
 obstacle = pyautogui.screenshot(region=obstacle_region)
 
 while True:
     diff = ImageChops.difference(obstacle, pyautogui.screenshot(region=obstacle_region))
+    #diff = ImageChops.difference(obstacle, pyautogui.screenshot("after.png", region=obstacle_region))
     if diff.getbbox():
         print("hey there is an obsticle time to jump")
         driver.find_element(By.TAG_NAME, "BODY").send_keys(Keys.UP)
