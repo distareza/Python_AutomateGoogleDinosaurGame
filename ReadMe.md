@@ -22,3 +22,4 @@ https://pypi.org/project/Pillow/
 https://pyautogui.readthedocs.io/en/latest/
 
 
+![alt text](https://github.com/distareza/Python_AutomateGoogleDinosaurGame/blob/master/Screenshot.png?raw=true)
